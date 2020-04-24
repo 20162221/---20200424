@@ -1,0 +1,216 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8DA3F7DA-AD01-4CB9-8018-36DFC47BE1D8}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <StartupObject>试题库管理系统.My.MyApplication</StartupObject>
+    <RootNamespace>试题库管理系统</RootNamespace>
+    <AssemblyName>试题库管理系统</AssemblyName>
+    <FileAlignment>512</FileAlignment>
+    <MyType>WindowsForms</MyType>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DocumentationFile>试题库管理系统.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>试题库管理系统.xml</DocumentationFile>
+    <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionExplicit>On</OptionExplicit>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionCompare>Binary</OptionCompare>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionStrict>Off</OptionStrict>
+  </PropertyGroup>
+  <PropertyGroup>
+    <OptionInfer>On</OptionInfer>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942, processorArchitecture=MSIL">
+      <HintPath>..\packages\Portable.BouncyCastle.1.8.6\lib\net40\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="ICSharpCode.SharpZipLib, Version=1.2.0.246, Culture=neutral, PublicKeyToken=1b03e6acf1164f73, processorArchitecture=MSIL">
+      <HintPath>..\packages\SharpZipLib.1.2.0\lib\net45\ICSharpCode.SharpZipLib.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OOXML, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.OOXML.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXml4Net, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXml4Net.dll</HintPath>
+    </Reference>
+    <Reference Include="NPOI.OpenXmlFormats, Version=2.5.1.0, Culture=neutral, PublicKeyToken=0df73ec7942b34e1, processorArchitecture=MSIL">
+      <HintPath>..\packages\NPOI.2.5.1\lib\net45\NPOI.OpenXmlFormats.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Drawing" />
+    <Import Include="System.Diagnostics" />
+    <Import Include="System.Windows.Forms" />
+    <Import Include="System.Linq" />
+    <Import Include="System.Xml.Linq" />
+    <Import Include="System.Threading.Tasks" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="账号管理\个人信息修改.Designer.vb">
+      <DependentUpon>个人信息修改.vb</DependentUpon>
+    </Compile>
+    <Compile Include="账号管理\个人信息修改.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="类与模块\全局变量.vb" />
+    <Compile Include="出卷系统\出卷主窗口.Designer.vb">
+      <DependentUpon>出卷主窗口.vb</DependentUpon>
+    </Compile>
+    <Compile Include="出卷系统\出卷主窗口.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="账号管理\开始界面.Designer.vb">
+      <DependentUpon>开始界面.vb</DependentUpon>
+    </Compile>
+    <Compile Include="账号管理\开始界面.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="类与模块\排序.vb" />
+    <Compile Include="出卷系统\智能组卷.Designer.vb">
+      <DependentUpon>智能组卷.vb</DependentUpon>
+    </Compile>
+    <Compile Include="出卷系统\智能组卷.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="题库管理\查询.Designer.vb">
+      <DependentUpon>查询.vb</DependentUpon>
+    </Compile>
+    <Compile Include="题库管理\查询.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="题库管理\添加单题.Designer.vb">
+      <DependentUpon>添加单题.vb</DependentUpon>
+    </Compile>
+    <Compile Include="题库管理\添加单题.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="题库管理\添加文件.Designer.vb">
+      <DependentUpon>添加文件.vb</DependentUpon>
+    </Compile>
+    <Compile Include="题库管理\添加文件.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="账号管理\登陆.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="账号管理\登陆.Designer.vb">
+      <DependentUpon>登陆.vb</DependentUpon>
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <Compile Include="题库管理\题库管理主窗口.Designer.vb">
+      <DependentUpon>题库管理主窗口.vb</DependentUpon>
+    </Compile>
+    <Compile Include="题库管理\题库管理主窗口.vb">
+      <SubType>Form</SubType>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="账号管理\个人信息修改.resx">
+      <DependentUpon>个人信息修改.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出卷系统\出卷主窗口.resx">
+      <DependentUpon>出卷主窗口.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="账号管理\开始界面.resx">
+      <DependentUpon>开始界面.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="出卷系统\智能组卷.resx">
+      <DependentUpon>智能组卷.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="题库管理\查询.resx">
+      <DependentUpon>查询.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="题库管理\添加单题.resx">
+      <DependentUpon>添加单题.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="题库管理\添加文件.resx">
+      <DependentUpon>添加文件.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="账号管理\登陆.resx">
+      <DependentUpon>登陆.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="题库管理\题库管理主窗口.resx">
+      <DependentUpon>题库管理主窗口.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.VisualBasic.targets" />
+</Project>
